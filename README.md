@@ -23,5 +23,7 @@ Assignify is a frontend web project designed to help students calculate the pric
 
   <li>jQuery – for easier DOM manipulation and interactivity</li>
     </ul>
+    <br><br>
+    ![image alt](https://github.com/tubahoorain/assignify-homework-helper-PROJECT/blob/35a449139008474f901d39b7c4f99973d0cc427b/Screenshot%20(562).png)
 
       
