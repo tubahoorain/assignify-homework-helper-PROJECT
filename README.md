@@ -17,12 +17,11 @@ Assignify is a frontend web project designed to help students calculate the pric
 
  <ul>
       <li>HTML5 for structure</li>
-
       <li>CSS3 for styling</li>
-
       <li>Bootstrap 4/5 – for responsive design and pre-built UI components</li>
+ <li>JavaScript (Vanilla JS) – for dynamic price calculation logic</li>
 
-      <li>JavaScript (Vanilla JS) – for dynamic price calculation logic</li>
-
-      <li>jQuery – for easier DOM manipulation and interactivity</li>
+  <li>jQuery – for easier DOM manipulation and interactivity</li>
     </ul>
+
+      
