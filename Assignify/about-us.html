@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .main {
+            width: 100%;
+
+           
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            background: transparent;
+            position: fixed;
+            z-index: 10;
+            background-color:  rgba(226, 140, 12, 0.9);;
+            box-shadow: 0 0 8px rgba(0,0,0,0.4);;
+        }
+
+        .logo {
+            color: black;
+            font-size: 30px;
+            font-family: Montserrat;
+            font-weight: 400;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .menu ul li a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .menu ul li a:hover {
+            color: white;
+        }
+
+        .search {
+            display: flex;
+        }
+
+        .srch {
+            height: 40px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid orange;
+            border-right: none;
+            background: transparent;
+            color: white;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .btn {
+            height: 40px;
+            width: 100px;
+            border: 1px solid orange;
+            background: orange;
+            color: white;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .about-content {
+            padding: 100px;
+        }
+
+        .about-head1 {
+            color: black;
+            margin-bottom: 25px;
+        }
+
+        .about-head3 {
+            color: black;
+            margin-bottom: 15px;
+        }
+
+        .about-para {
+            color: black;
+            margin-bottom: 10px
+        }
+
+        .about-para1 {
+           color: black;
+        }
+             .banner {
+            width: 100%;
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%),
+                url('images/animate-bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+           
+        }
+        .banner-content{
+            padding: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+      
+        .phone-btn {
+      background-color: orange; /* Yellow color */
+      color: #000;
+      border-radius: 50px;
+      padding: 8px 20px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      width: 15%;
+      
+      
+    }
+
+    .phone-icon {
+      background-color: white;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 10px;
+    }
+
+    .phone-icon i {
+      color: orange;
+    }
+
+    .phone-number {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+
+    
+
+     .feature-icon {
+      width: 100px;
+      height: 100px;
+      background-color: #2d3748; /* dark background */
+      color: orange; /* yellow color */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 2rem;
+      margin: 0 auto 15px auto;
+    }
+    .container h6{
+        color: black;
+    }
+    .services{
+        margin-top: 30px;
+    }
+
+.banner-services{
+width: 100%;
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%),
+                url('images/animate-bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            justify-content: center;
+}
+     h3 {
+      color: orange; /* Gold color for "Services" heading */
+      margin-bottom: 30px;
+    }
+    .service-list {
+      list-style: none;
+      padding-left: 0;
+      color: white;
+    }
+    .service-list li {
+      margin-bottom: 10px;
+    }
+
+    </style>
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo">ASSIGNIFY</div>
+            <!-- Hamburger Icon -->
+            <!-- <div class="hamburger-icon" id="hamburger-icon">
+        &#9776;
+      </div> -->
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#about-us">ABOUT US</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="#">REVIEWS</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" placeholder="Type to text" />
+                <button class="btn">Search</button>
+            </div>
+        </div>
+
+
+        <div id="about-us">
+            <div class="about-content">
+                <h1 class="about-head1">ABOUT US:</h1>
+                <h3 class="about-head3">WHO ARE WE?</h3>
+                <p class="about-para">Assignment Master is the leading assignment writing service in the UK that aims to
+                    deliver client-centric and
+                    premium quality assignments to the customers. Our expert writers craft the assignments with immense
+                    delicacy
+                    right according to the requirements stipulated by you.</p><br>
+
+                <p class="about-para1">We aim to de-stress the minds of the students by sharing and alleviating their
+                    burdens along with maintaining
+                    the quality. Whenever you desire for the assistance of a professional assignment writing service,
+                    you can
+                    certainly count on us!</p><br><br>
+
+                <h3 class="about-head3">OUR DEXTEROUS WRITERS:</h3>
+
+                <p class="about-para">We have a dedicated team of professional and proficient writers who are
+                    experienced in their own academic realms. These writers utilize their passion, diverse knowledge and
+                    vast experiences to deliver the quality services to the customers.</p><br>
+
+                <p class="about-para1">Our professional and qualified team of writers is well-versed with the various
+                    formats of the assignments; thus, it ensures to deliver a high-quality assignment catering your
+                    specified details. The team is also well-trained to deal with the complex assignments in an
+                    effective way.</p><br><br>
+
+
+                <h3 class="about-head3">OUR MISSION</h3>
+
+
+                <p class="about-para">When the students are assigned a lot of tasks, they become stressed out. Our
+                    mission is to establish a platform which provides relief and peace of mind to such students by
+                    eradicating their fears and ambiguities. We do not only aim to provide the students with quality
+                    assignments and assistance, we also strive to help them develop significant skills. Our top priority
+                    is to achieve customer satisfaction and make constant efforts to retain it.</p><br>
+
+
+                <h1 class="about-head1">WHY CHOOSE US?</h1>
+                <p class="about-para1">A question might have aroused in your mind; why should you hire us? We have
+                    qualified expert writers in our team who are available round-the-clock to assist you. Let’s have a
+                    look at more of our unique features:</p>
+
+                <ul>
+                    <li>Our expert writers strive to deliver the quality content to you within the stipulated deadline,
+                        irrespective of the type of order.</li>
+                    <li>We have designed our pricing structure right according to the needs of the customers to ensure
+                        the quality deliverance at the budget-friendly prices.</li>
+                    <li>If you’re not satisfied with the quality of the content, avail the money-back guarantee.</li>
+                </ul>
+
+                <h1 class="about-head1">WE ARE AUTHENTIC</h1>
+                <p class="about-para1">n online agency offering a wide range of promising services; should you trust it?
+                    Won’t it be a fraud? No, we assure you! We offer 100% genuine services to our customers to ensure
+                    100% customer satisfaction. Before the deliverance, we conduct a quality check on the assignments to
+                    make them flawless.</p>
+            </div>
+
+        </div>
+<div class="banner">
+    <div class="banner-content">
+        <h2>Contact us for instant assignment help provided by the<br> expert writers in the UK!</h2>
+
+    </div>
+    <div class="phone-btn">
+    <div class="phone-icon">
+      <i class="bi bi-telephone-fill"></i>
+    </div>
+    <div class="phone-number">+44 20 3930 1313</div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container services py-5">
+  <div class="row text-center">
+    <div class="col-md-3 mb-4">
+      <div class="feature-icon">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <h6>Original Work Free Of Plagiarism</h6>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="feature-icon">
+        <i class="fas fa-undo-alt"></i>
+      </div>
+      <h6>Money Back Guarantee</h6>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="feature-icon">
+        <i class="fas fa-receipt"></i>
+      </div>
+      <h6>No Hidden Charges</h6>
+    </div>
+    <div class="col-md-3 mb-4">
+      <div class="feature-icon">
+        <i class="fas fa-user-shield"></i>
+      </div>
+      <h6>Safety Of Your Identity</h6>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid py-5 banner-services">
+  <h3 class="row justify-content-center">Services</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-3 col-xl-2">
+      <ul class="service-list">
+        <li>Finance Assignment</li>
+        <li>Write My Dissertation</li>
+        <li>Literature Review</li>
+        <li>Proofreading</li>
+        <li>Write My Assignment</li>
+        <li>Do My Homework</li>
+        <li>Dissertation Editing</li>
+        <li>HR Assignment Help</li>
+        <li>Accounting Assignment</li>
+        <li>Marketing Assignment</li>
+        <li>Kaplan Assignment</li>
+        <li>Fashion Assignment</li>
+        <li>Pharmacology Assignment</li>
+        <li>Astronomy Assignment</li>
+        <li>EViews Assignment</li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-lg-3 col-xl-2">
+      <ul class="service-list">
+        <li>Economics Assignment</li>
+        <li>PGCE Assignment</li>
+        <li>CMI Assignment</li>
+        <li>ILM Assignment</li>
+        <li>EDEXCEL Assignment</li>
+        <li>CIM Assignment</li>
+        <li>SVQ Assignment</li>
+        <li>Tableau Assignment</li>
+        <li>TQUK Assignment</li>
+        <li>Report Writing</li>
+        <li>Dissertation Proposal</li>
+        <li>Java Assignment Help</li>
+        <li>Anthropology Assignment</li>
+        <li>Geography Assignment</li>
+        <li>ERP Assignment</li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-lg-3 col-xl-2">
+      <ul class="service-list">
+        <li>TAFE Assignment</li>
+        <li>IOSCM Assignment</li>
+        <li>ANSYS Assignment</li>
+        <li>Resit Assignment Help</li>
+        <li>CIPS Assignment Help</li>
+        <li>Buy Assignment</li>
+        <li>Do My Assignment</li>
+        <li>Write My Essay</li>
+        <li>College Assignment</li>
+        <li>University Assignment</li>
+        <li>HND Assignment</li>
+        <li>BTEC Assignment</li>
+        <li>Aviation Assignment</li>
+        <li>Theology Assignment</li>
+        <li>CTH Assignment</li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-lg-3 col-xl-2">
+      <ul class="service-list">
+        <li>Nursing Assignment</li>
+        <li>MBA Assignment</li>
+        <li>Law Assignment</li>
+        <li>CIPD Assignment</li>
+        <li>Business Assignment</li>
+        <li>PHD Writing</li>
+        <li>Academic Writing</li>
+        <li>Open university</li>
+        <li>Term Paper Writing</li>
+        <li>Personal Statement</li>
+        <li>NEBOSH Assignment</li>
+        <li>Philosophy Assignment</li>
+        <li>Psychology Assignment</li>
+        <li>RQF Assignment</li>
+        <li>ETAP Assignment</li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-lg-3 col-xl-2">
+      <ul class="service-list">
+        <li>TEFL Assignment</li>
+        <li>NVQ Assignment Help</li>
+        <li>Data Science</li>
+        <li>Physics Assignment</li>
+        <li>English Assignment</li>
+        <li>IWFM Assignment</li>
+        <li>ISPM Assignment</li>
+        <li>Midwifery Assignment</li>
+        <li>MYOB Assignment</li>
+        <li>SPSS Assignment Help</li>
+        <li>Communication Assignment</li>
+        <li>Music Assignment</li>
+        <li>Zoology Assignment</li>
+        <li>Political Science Assignment</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .main {
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%),
+        url('images/banner1.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+      background: transparent;
+      position: fixed;
+      z-index: 10;
+    }
+
+    .logo {
+      color: orange;
+      font-size: 30px;
+      font-family: monospace;
+      font-weight: 100;
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .menu ul li a:hover {
+      color: orange;
+    }
+
+    .search {
+      display: flex;
+    }
+
+    .srch {
+      height: 40px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid orange;
+      border-right: none;
+      background: transparent;
+      color: white;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .btn {
+      height: 40px;
+      width: 100px;
+      border: 1px solid orange;
+      background: orange;
+      color: white;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      cursor: pointer;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 40px 40px;
+      position: relative;
+      z-index: 1;
+    
+    }
+
+    .content h1 {
+      font-family: 'Lucida Handwriting', cursive;
+      font-size: 35px;
+      margin-bottom: 10px;
+      margin-top: 140px;
+
+    }
+
+    .content span {
+      color: orange;
+      font-size: 50px;
+    }
+
+    .content p {
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+
+    .cn {
+      background: orange;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 100px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .cn a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .quote-form {
+      width: 280px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      position: absolute;
+      top: 180px; /* below navbar */
+      right: 30px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      color: black;
+    }
+
+    .quote-form h2 {
+      color: orange;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .quote-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .quote-form .price {
+      font-size: 16px;
+      margin: 10px 0;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .quote-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: orange;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .quote-btn:hover {
+      background-color: #e69500;
+    }
+    .hamburger-icon{
+      display: none;
+    }
+    /* Media Queries for Mobile Devices */
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+  }
+
+  .menu {
+    display: none; /* Hide menu on mobile */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .menu ul li a {
+    font-size: 18px;
+  }
+
+  .search {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .srch,
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content span {
+    font-size: 40px;
+  }
+
+  .quote-form {
+    width: 100%;
+    top: 30px;
+    right: 10px;
+  }
+
+  .quote-form select {
+    font-size: 14px;
+  }
+
+  .quote-btn {
+    font-size: 14px;
+  }
+}
+

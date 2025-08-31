@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>assignify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    @media (max-width: 768px) {
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    .main {
+      width: 100%;
+      min-height: 100vh;
+background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.7) 50%),
+        url('images/banner1.jpg');      padding: 100px 20px 40px;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      background-color: rgba(226, 140, 12, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      z-index: 999;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .menu {
+      display: flex;
+      gap: 30px;
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .menu ul li a:hover {
+      color: white;
+    }
+
+    .search {
+      display: flex;
+      gap: 10px;
+    }
+
+    .srch {
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      border: none;
+      background-color: black;
+      color: white;
+      border-radius: 4px;
+    }
+
+    .hamburger-icon {
+      display: none;
+      font-size: 30px;
+      color: black;
+      cursor: pointer;
+    }
+
+    /* Content */
+    .content {
+      max-width: 800px;
+      margin: 100px auto;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .content span {
+      color: orange;
+    }
+
+    .cn a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .cn {
+      padding: 10px 20px;
+      background: black;
+      border: none;
+      border-radius: 25px;
+      margin: 15px 0;
+    }
+
+    /* Quote Form */
+    .quote-form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .quote-form h2 {
+      margin-bottom: 15px;
+      color: orange;
+    }
+
+    .quote-form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .quote-form .price {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .quote-btn {
+      background-color: orange;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      color: black;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hamburger-icon {
+        display: block;
+      }
+      .main {
+      width: 100%;
+      min-height: 150vh;
+
+      }
+      .navbar{
+        margin-left: 0;
+      }
+
+      .menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background-color: rgba(226, 140, 12, 0.95);
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .search {
+        display: none;
+      }
+
+      .navbar {
+        flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 10px;
+        
+      }
+
+      .quote-form {
+        padding: 20px;
+     background-color: rgba(white, white, white, 0.1);
+        position: relative;
+        border-radius: 8px;
+      margin-top: 30px;
+      }
+     
+.content{
+    margin-top: 0;
+    padding: 0;
+}
+      .content h1 {
+        font-size: 28px;
+      }
+
+      .srch,
+      .btn {
+        width: 100%;
+      }
+    }
+    }
+
+</style>
+<body>
+
+
+  <script src="script.js"></script>
+
+  <div class="main">
+    <div class="navbar">
+      <div class="logo">ASSIGNIFY</div>
+      <!-- Hamburger Icon -->
+      <div class="hamburger-icon" id="hamburger-icon">
+        &#9776;
+      </div>
+
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about-us.html">ABOUT US</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="#">REVIEWS</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <input class="srch" type="search" placeholder="Type to text" />
+        <button class="btn">Search</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Struggling with Homework? <br><span>We’ve Got Your Back 24/7</span></h1>
+      <p>
+        Whether it's an essay, research paper, or project <br>
+        our professional writers are here to help you meet deadlines stress-free.
+      </p>
+      <button class="cn"><a href="#">ORDER PAPER NOW</a></button>
+
+      <div class="quote-form">
+        <h2>Calculate Price</h2>
+        <select id="education-level">
+          <option>Select Education Level</option>
+          <option>College</option>
+          <option>Undergraduate</option>
+          <option>Masters</option>
+          <option>PhD</option>
+        </select>
+
+        <select id="paper-type">
+          <option>Select Paper Type</option>
+          <option>Essay (Any Type)</option>
+          <option>Report</option>
+          <option>Case Study</option>
+          <option>Research Paper</option>
+        </select>
+
+        <select id="word-count">
+          <option>Select Word Count / Pages</option>
+          <option>1 Page / 275 Words</option>
+          <option>2 Pages / 550 Words</option>
+          <option>3 Pages / 825 Words</option>
+          <option>4 Pages / 1100 Words</option>
+        </select>
+
+        <select id="deadline">
+          <option>Select Deadline</option>
+          <option>3 Days</option>
+          <option>5 Days</option>
+          <option>7 Days</option>
+          <option>9 Days</option>
+          <option>14 Days</option>
+        </select>
+
+        <div class="price">Price (USD): <span>$0.00</span></div>
+        <button class="quote-btn">ORDER NOW</button>
+      </div>
+    </div>
+  </div>
+
+ <script>
+    const hamburger = document.getElementById("hamburger-icon");
+    const menu = document.getElementById("menu");
+
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
+  <script src="script.js"></script>
+ 
+
+</body>
+
+</html>
